@@ -1,0 +1,78 @@
+import midi
+import time
+import matplotlib.pyplot as plt
+
+import matplotlib.animation as animation
+from matplotlib import style
+fig = plt.figure()
+ax1 = fig.add_subplot(111)
+ax2 = fig.add_subplot(111)
+ax3 = fig.add_subplot(111)
+ax4 = fig.add_subplot(111)
+ax5 = fig.add_subplot(111)
+ax6 = fig.add_subplot(111)
+ax7 = fig.add_subplot(111)
+ax8 = fig.add_subplot(111)
+fig.show()
+
+song=midi.read_midifile("dont.mid")
+song.make_ticks_abs()
+tracks = []
+i=0
+for track in song:
+    notes = [note for note in track if note.name == 'Note On']
+    pitch = [note.pitch for note in notes]
+    tick = [note.tick for note in notes]
+    tracks += [tick, pitch]
+
+t1,t1x,t1y=0,[],[]
+t2,t2x,t2y=0,[],[]
+t3,t3x,t3y=0,[],[]
+t4,t4x,t4y=0,[],[]
+t5,t5x,t5y=0,[],[]
+t6,t6x,t6y=0,[],[]
+t7,t7x,t7y=0,[],[]
+t8,t8x,t8y=0,[],[]
+
+track_length=len(tracks)
+print('in')
+for a,b,c,d,e,f,g,h in zip(tracks[8],tracks[9],tracks[2],tracks[3],tracks[4],tracks[5],tracks[6],tracks[7]):
+    print('inside')
+    t1x.append(t1)
+    t1y.append(a)
+    t2x.append(t2)
+    t2y.append(b)
+    t3x.append(t3)
+    t3y.append(c)
+    t4x.append(t4)
+    t4y.append(d)
+    t5x.append(t5)
+    t5y.append(e)
+    t6x.append(t6)
+    t6y.append(f)
+    t7x.append(t7)
+    t7y.append(g)
+    t8x.append(t8)
+    t8y.append(h)
+    t1+=1
+    t2+=1
+    t3+=1
+    t4+=1
+    t5+=1
+    t6+=1
+    t7+=1
+    t8+=1
+    
+    ax1.plot(t1x,t1y,color='b')
+    ax2.plot(t2x,t2y,color='y')
+    ax3.plot(t3x,t3y,color='r')
+    ax4.plot(t4x,t4y,color='c')
+    ax5.plot(t5x,t5y,color='m')
+    ax6.plot(t6x,t6y,color='y')
+    ax7.plot(t7x,t7y,color='k')
+    ax8.plot(t8x,t8y,color='g')
+    fig.canvas.draw()
+    time.sleep(0.5)
+
+plt.show()
+# fig.show()
