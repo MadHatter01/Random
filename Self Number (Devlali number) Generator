@@ -1,0 +1,22 @@
+import argparse
+
+# parser = argparse.ArgumentParser(description='Enter a range')
+# parser.add_argument('number', help="Enter a limit")
+# args = parser.parse_args()
+
+# limit=int(args.number)
+limit=int(input('Enter a range :'))
+digits=[]
+for j in range(0,limit):
+    sum=0
+    sum+=j
+    while j:
+        sum+=j%10
+        j//=10
+    digits.append(sum)
+
+all_numbers=list(range(0,limit))
+
+self_numbers=(list(set(all_numbers) - set(digits)))
+self_numbers.sort()
+print(self_numbers)
