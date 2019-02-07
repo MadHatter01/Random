@@ -35,9 +35,7 @@ t7,t7x,t7y=0,[],[]
 t8,t8x,t8y=0,[],[]
 
 track_length=len(tracks)
-print('in')
 for a,b,c,d,e,f,g,h in zip(tracks[8],tracks[9],tracks[2],tracks[3],tracks[4],tracks[5],tracks[6],tracks[7]):
-    print('inside')
     t1x.append(t1)
     t1y.append(a)
     t2x.append(t2)
