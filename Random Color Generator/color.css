@@ -1,0 +1,31 @@
+body{
+    margin:0px;
+    overflow: hidden;
+}
+#colorBox{
+    width:300px;
+    height:300px;
+    left:40%;
+    text-align: center;
+    
+}
+#container {
+position: relative;
+}
+ #colorBox, #parentColor {
+position: absolute;
+}
+#colorLabel{
+    font-size:30px;
+    color:#000;
+    display: inline-block;
+    margin-top:45%;
+    
+
+}
+
+#parentColor{
+    font-size:30px;
+    color:#000;
+
+}
