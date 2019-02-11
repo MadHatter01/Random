@@ -17,3 +17,4 @@ var colorBox=document.getElementById('colorBox');
 console.log(hex);
 document.getElementById('colorLabel').innerText='#'+hex;
 colorBox.style.backgroundColor='#'+hex;
+
