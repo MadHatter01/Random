@@ -26,6 +26,11 @@ class TestMultipler(unittest.TestCase):
 #         x = x-1
 #     return sum
 
+def optimizedMultiplier(a,b):
+	if a==0: return 0
+	if a%2 == 0: return 2* OptimizedMultiplier(a>>1, b)
+	return b+ 2*OptimizedMultiplier(a>>1,b)
+
 
 def performance():
 
