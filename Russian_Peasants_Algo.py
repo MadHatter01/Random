@@ -17,6 +17,14 @@ class TestMultipler(unittest.TestCase):
 		self.assertEqual(multiplier(23,4),92)
 		self.assertEqual(multiplier(a,b),a*b)
 
+# def MultiplierX(a, b):
+#     x = a
+#     y = b
+#     sum = 0
+#     while x > 0:
+#         sum = sum + y
+#         x = x-1
+#     return sum
 
 
 def performance():
